@@ -47,6 +47,10 @@ body {
   box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 20px #fff;
   border-radius: 10px;
   margin-bottom: 12px;
+  width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   padding: 0 20px;
   font-size: 2em;
   font-weight: 500;
