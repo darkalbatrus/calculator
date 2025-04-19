@@ -7,6 +7,7 @@
     <title>Calculator</title>
   </head>
   <body>
+    <div class="toggleBtn" onclick="theme()">Day</div>
     <div class="calculator">
       <div class="buttons">
         <h2 id="value"></h2>
@@ -34,6 +35,8 @@
       let buttons = document.querySelector(".buttons");
       let btns = document.querySelectorAll("span");
       let value = document.getElementById("value");
+      let toggleBtn = document.querySelector(".toggleBtn");
+      let body = document.querySelector("body");
 
       for (let i = 0; i < btns.length; i++) {
         btns[i].addEventListener("click", function () {
@@ -48,6 +51,15 @@
           }
         });
       }
+
+      const theme = () => {
+        body.classList.toggle("dark");
+        if (body.classList.contains("dark")) {
+          toggleBtn.innerHTML = "Night";
+        } else {
+          toggleBtn.innerHTML = "Day";
+        }
+      };
     </script>
   </body>
 </html>
