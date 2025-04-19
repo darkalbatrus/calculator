@@ -3,11 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/style.css" />
     <title>Calculator</title>
   </head>
   <body>
-    <div class="toggleBtn" onclick="theme()">Day</div>
+    <div class="toggleBtn" onclick="theme()">شب</div>
     <div class="calculator">
       <div class="buttons">
         <h2 id="value"></h2>
@@ -31,6 +37,9 @@
         <span id="equal">=</span>
       </div>
     </div>
+    <footer>
+      این ماشین حساب توسط زهرا حاجی آبای و مهدیه تجری ساخته شده است
+    </footer>
     <script>
       let buttons = document.querySelector(".buttons");
       let btns = document.querySelectorAll("span");
@@ -55,9 +64,9 @@
       const theme = () => {
         body.classList.toggle("dark");
         if (body.classList.contains("dark")) {
-          toggleBtn.innerHTML = "Night";
+          toggleBtn.innerHTML = "روز";
         } else {
-          toggleBtn.innerHTML = "Day";
+          toggleBtn.innerHTML = "شب";
         }
       };
     </script>
